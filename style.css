@@ -75,7 +75,7 @@ h3 {
     width: 170px;
 }
 .textarea__grid{
-	grid-template-columns: 150px 1fr;
+	grid-template-columns: minmax(150px,50px) 1fr;
 	grid-gap: 20px;
 	background: #fff;
 	padding: 10px;
@@ -92,6 +92,7 @@ h3 {
 .container_grid{
 	grid-template-columns: 1fr minmax(330px, 200px);
 }
+.content__img{display:none;}
 .rightcol-blocks{
  
 }
