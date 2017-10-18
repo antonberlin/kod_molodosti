@@ -90,7 +90,7 @@ h3 {
 
 @media screen and (min-width: 980px) {
 .container_grid{
-	grid-template-columns: 1fr 200px;
+	grid-template-columns: 1fr minmax(330px, 200px);
 }
 .rightcol-blocks{
  
