@@ -102,7 +102,10 @@ h3 {
 @media screen and (max-width: 980px) {
   .left__content {
     margin: 20px;
-
+}
+.container_grid{
+	grid-template-columns: 1fr;
+	grid-template-columns: 1fr 200px
 }
 .rightcol-blocks {
     grid-template-columns: repeat(2, 1fr);
@@ -111,7 +114,5 @@ h3 {
 .container{
 	margin:0 20px;
 }
-	.container_grid{
-	grid-template-columns: 1fr;
-}
+
 }
