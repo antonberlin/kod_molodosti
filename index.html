@@ -6,17 +6,30 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>New Project</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/fancybox.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
 </head>
 <body>
 	<div class="wrapper">
 		<div class="menu">
-		<a href="#" class="menu__btn-drop"><i class="fa fa-bars" aria-hidden="true"></i>
-</a>
-			<ul class="menu__container">
+		
+		<div class="menu__btn-drop">
+		<img src="img/Screenshot_16.jpg" width="50px">
+		<div id="nav-icon1">
+		  <span></span>
+		  <span></span>
+		  <span></span>
+		</div>
+		</div>
+			<ul class="menu__container" id="menu">
 				<li><a href="http://xn----gtbbqgigndbb0bn.xn--p1ai/#breadcrumbs" class="menu__link" title="Новости">Новости</a></li>
 				<li><a href="http://xn----gtbbqgigndbb0bn.xn--p1ai/fotogalereya#breadcrumbs" class="menu__link" title="Фотогалерея">Фотогалерея</a>
+					<ul class="sub-menu">
+						<li><a href="#">Фотогалерея</a></li>
+						<li><a href="#">Фотогалерея</a></li>
+						<li><a href="#">Фотогалерея</a></li>
+					</ul>
 				</li>
 				<li><a href="http://xn----gtbbqgigndbb0bn.xn--p1ai/uslugi#breadcrumbs" class="menu__link" title="Услуги">Услуги</a>
 				</li>
@@ -81,6 +94,7 @@ kod.molodosti@mail.ru</a>-->
 			<div class="news__content">
 				<div class="news__header">Завершился 5-й Международный Эксперт-конгресс ENTERESTET «Последние достижения инъекционной косметологии»!</div>
 				<div class="news__text"><p>Со 2 по 4 октября 2017 года на Кипре проходил 5-й Международный Эксперт-конгресс ENTERESTET «Последние достижения инъекционной косметологии». Организаторами мероприятия выступили Международный проект ENTERESTET, Национальное общество мезотерапии (НОМ)</p></div>
+				<div class="news__imgs"><a href="img/photo.jpg" rel="fancy"><img src="img/photo.jpg" width="200px" width="200px"></a><a href="img/photo2.jpg" rel="fancy"><img src="img/photo2.jpg" width="200px"></a></div>
 				<div class="news__link1"><a href="#" class="news__link">Подробнее <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
 
 </a></div>
@@ -183,5 +197,67 @@ kod.molodosti@mail.ru</a>-->
 	</div>
 </div>
 	</div>
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/fancybox.js"></script>
+		<script>
+	$(function(){
+		$("a[rel=fancy]").fancybox({'transitionIn': 'none','transitionOut': 'none', 'nextEffect': 'none', 'prevEffect': 'none'});
+		
+		
+		
+		$("a[rel=fancy-form]").fancybox({
+			arrows: false,
+			mouseWheel: false,
+			'openEffect': 'elastic',
+			'closeEffect': 'elastic',
+			'nextEffect': 'none',
+			'prevEffect': 'none',
+			'openSpeed': 'normal',
+			'closeSpeed': 'normal',
+			'nextSpeed': 'normal',
+			'prevSpeed': 'normal',
+			helpers : {
+				overlay : {
+					locked: false
+				}
+			}
+		});
+		
+		
+		
+		if(location.hash&&location.hash!='#false'&&$(location.hash).length>0)
+		{
+			if($(location.hash).hasClass('fancyOpen'))
+			{
+				$.fancybox.open(location.hash);
+				location.hash=false;
+			}
+		}
+		
+	});
+</script>
+<script>
+$(function(){
+	$('.menu__btn-drop').click(function(){
+		$('#nav-icon1').toggleClass('open');
+		$('.menu__container').toggleClass('open2');
+	})
+	$(document).click(function(event){
+		if ($(event.target).closest('.menu__btn-drop').length) return;
+		$('.menu__container').removeClass('open2');
+		$('#nav-icon1').removeClass('open');
+		event.stopPropagation();
+	});
+})			
+</script>
+<script type="text/javascript">
+$(function(){
+	$('#menu li').hover(function(){
+		$(this).children('ul').stop(false,true).fadeIn(300);
+	},function(){
+		$(this).children('ul').stop(false,true).fadeOut(300);
+	});
+});
+</script>
 </body>
 </html>
