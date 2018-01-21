@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewoirt" content="width=device-width">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>New Project</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -12,6 +12,7 @@
 </head>
 <body>
 	<div class="wrapper">
+	<div class="main-menu">
 		<div class="menu">
 		
 		<div class="menu__btn-drop">
@@ -24,23 +25,100 @@
 		</div>
 			<ul class="menu__container" id="menu">
 				<li><a href="http://xn----gtbbqgigndbb0bn.xn--p1ai/#breadcrumbs" class="menu__link" title="Новости">Новости</a></li>
-				<li><a href="http://xn----gtbbqgigndbb0bn.xn--p1ai/fotogalereya#breadcrumbs" class="menu__link" title="Фотогалерея">Фотогалерея</a>
-					<ul class="sub-menu">
-						<li><a href="#">Фотогалерея</a></li>
-						<li><a href="#">Фотогалерея</a></li>
-						<li><a href="#">Фотогалерея</a></li>
-					</ul>
-				</li>
-				<li><a href="http://xn----gtbbqgigndbb0bn.xn--p1ai/uslugi#breadcrumbs" class="menu__link" title="Услуги">Услуги</a>
-				<ul class="sub-menu">
-						<li><a href="#">Фотогалерея</a></li>
-						<li><a href="#">Фотогалерея</a></li>
-						<li><a href="#">Фотогалерея</a></li>
-					</ul>
-				</li>
-				<li><a href="http://xn----gtbbqgigndbb0bn.xn--p1ai/#" class="menu__link" title="О нас">О нас</a></li>
-			</ul>
+				<li><a class="menu__link" title="Фотогалерея" id="fotogalery">Фотогалерея <i class="fa fa-caret-down submenu__icon_right"></i></a>
+				<div class="display_none">
+				<div class="menu__submenu ">
+			<div>
+			<a href="#"><img src="img/fotogalery.jpg">Стажировка г.Лектур Франция</a></div>
+			<div>
+			<a href="#">
 
+			<img src="img/fotogalery2.jpg">Презентация Швейцарского бренда GREYMY кератинового восстановления волос 29.03.17</a>
+					</div>
+			
+			<div>
+			<a href="#">
+
+			<img src="img/fotogalery3.jpg">Обучение на Международной конференции Института медицинской эстетики Allergan (Прага 16-18 февраля)</a>
+					</div>
+			
+			<div>
+			<a href="#">
+				<img src="img/fotogalery4.jpg">4-й Международный конгресс в Дубаи "Инновационные технологии в эстетической медицине" Октябрь 2016</a>
+					</div>
+					<div>
+			<a href="#">
+			<img src="img/fotogalery5.jpg">Наш центр</a>
+					</div>
+					<div>
+			<a href="#">
+			<img src="img/fotogalery6.jpg">Преображение</a>
+					</div>
+			</div>
+			</div>
+				</li>
+				<li><a class="menu__link" id="uslugi" title="Услуги">Услуги <span class="fa fa-caret-down submenu__icon_right"></span></a>
+				<div class="display_none"><div class="menu__submenu">
+		<div>
+		Лицо
+			<ul class="sub-menu menu__submenu1">
+						
+						<li><a href="#">Пиллинг</a></li>
+						<li><a href="#">Массаж</a></li>
+						<li><a href="#">Контурная пластика</a></li>
+						<li><a href="#">Лифтинговые процедуры</a></li>
+						<li><a href="#">Антиакне</a></li>
+						<li><a href="#">Уход за лицом</a></li>
+			</ul>
+			</div>
+			<div>
+			Волосы
+			<ul class="sub-menu">
+						<li><a href="#">Мезотерапия волос</a></li>
+						<li><a href="#">Токи Дарсонваля</a></li>
+						<li><a href="#">Микротоковая терапия</a></li>
+						<li><a href="#">Газожидкостный пилинг</a></li>
+						<li><a href="#">Безинъекционная терапия</a></li>
+					</ul>
+					</div>
+			<div>
+			Тело
+			<ul class="sub-menu">
+						<li><a href="#">Мэлсмон</a></li>
+						<li><a href="#">Стройный силуэт</a></li>
+						<li><a href="#">Йога</a></li>
+						<li><a href="#">Масса</a></li>
+						<li><a href="#">Лечебная гимнастика</a></li>
+						<li><a href="#">ИМАГО</a></li>
+						<li><a href="#">Обертывание</a></li>
+					</ul>
+					</div>
+			
+			<div>
+			<a href="#">
+
+			<img src="img/Screenshot_12.jpg"></a>
+					</div>
+			
+			<div>
+			<a href="#">
+				<img src="img/Screenshot_15.jpg"></a>
+					</div>
+					<div>
+			<a href="#">
+			<img src="img/Screenshot_14.jpg"></a>
+					</div>
+			</div>
+			</div>
+				</li>
+				<li><a href="http://xn----gtbbqgigndbb0bn.xn--p1ai/#" class="menu__link" title="О нас">О нас <span class="fa fa-caret-down submenu__icon_right"></span></a>
+				
+				</li>
+			</ul>
+			
+
+		</div>
+		
 		</div>
 		<div class="header">
 			<div class="header__title">
@@ -202,9 +280,9 @@ kod.molodosti@mail.ru</a>-->
 	</div>
 </div>
 	</div>
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/fancybox.js"></script>
-		<script type="text/javascript">
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/fancybox.js"></script>
+		<script>
 	$(function(){
 		$("a[rel=fancy]").fancybox({'transitionIn': 'none','transitionOut': 'none', 'nextEffect': 'none', 'prevEffect': 'none'});
 		
@@ -241,14 +319,14 @@ kod.molodosti@mail.ru</a>-->
 		
 	});
 </script>
-<script type="text/javascript">
+<script>
 $(function(){
 	$('.menu__btn-drop').click(function(){
 		$('#nav-icon1').toggleClass('open');
 		$('.menu__container').toggleClass('open2');
 	})
 	$(document).click(function(event){
-		if ($(event.target).closest('.menu__btn-drop').length) return;
+		if ($(event.target).closest('.menu__btn-drop,#uslugi, #fotogalery, .menu__submenu').length) return;
 		$('.menu__container').removeClass('open2');
 		$('#nav-icon1').removeClass('open');
 		event.stopPropagation();
@@ -258,9 +336,9 @@ $(function(){
 <script type="text/javascript">
 $(function(){
 	$('#menu li').hover(function(){
-		$(this).children('ul').stop(false,true).fadeIn(300);
+		$(this).children('div').stop(false,true).fadeIn(300);
 	},function(){
-		$(this).children('ul').stop(false,true).fadeOut(300);
+		$(this).children('div').stop(false,true).fadeOut(300);
 	});
 });
 </script>
