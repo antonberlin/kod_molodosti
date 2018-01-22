@@ -12,18 +12,9 @@
 </head>
 <body>
 	<div class="wrapper">
-	<div class="main-menu">
+	<div class="main-menu" id="menu">
 		<div class="menu">
-		
-		<div class="menu__btn-drop">
-		<img src="img/Screenshot_16.jpg" width="50px">
-		<div id="nav-icon1">
-		  <span></span>
-		  <span></span>
-		  <span></span>
-		</div>
-		</div>
-			<ul class="menu__container" id="menu">
+			<ul class="menu__container" id="nav">
 				<li><a href="http://xn----gtbbqgigndbb0bn.xn--p1ai/#breadcrumbs" class="menu__link" title="Новости">Новости</a></li>
 				<li><a class="menu__link" title="Фотогалерея" id="fotogalery">Фотогалерея <i class="fa fa-caret-down submenu__icon_right"></i></a>
 				<div class="display_none">
@@ -119,6 +110,15 @@
 
 		</div>
 		
+		</div>
+		<div id="panel">
+		<div class="menu__btn-drop" id="menu-btn" >
+		<img src="img/Screenshot_16.jpg" width="50px">
+		<div id="nav-icon1">
+		  <span></span>
+		  <span></span>
+		  <span></span>
+		</div>
 		</div>
 		<div class="header">
 			<div class="header__title">
@@ -278,11 +278,12 @@ kod.molodosti@mail.ru</a>-->
 		<p>+7 (843) 216-77-60
 - косметология</p>
 	</div>
+	</div>
 </div>
 	</div>
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-+	<script type="text/javascript" src="js/fancybox.js"></script>
-		<script type="text/javascript">
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/fancybox.js"></script>
+		<script>
 	$(function(){
 		$("a[rel=fancy]").fancybox({'transitionIn': 'none','transitionOut': 'none', 'nextEffect': 'none', 'prevEffect': 'none'});
 		
@@ -320,7 +321,7 @@ kod.molodosti@mail.ru</a>-->
 	});
 </script>
 <script type="text/javascript">
-$(function(){
+/*$(function(){
 	$('.menu__btn-drop').click(function(){
 		$('#nav-icon1').toggleClass('open');
 		$('.menu__container').toggleClass('open2');
@@ -331,16 +332,18 @@ $(function(){
 		$('#nav-icon1').removeClass('open');
 		event.stopPropagation();
 	});
-})			
-</script >
+})		*/
+</script>
 <script type="text/javascript">
 $(function(){
-	$('#menu li').hover(function(){
+	$('#nav li').hover(function(){
 		$(this).children('div').stop(false,true).fadeIn(300);
 	},function(){
 		$(this).children('div').stop(false,true).fadeOut(300);
 	});
 });
 </script>
+<script type="text/javascript" src="js/slideout.js"></script>
+<script type="text/javascript" src="js/mobile.js"></script>
 </body>
 </html>
